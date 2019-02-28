@@ -6,6 +6,12 @@
 
 		<p>{{ $project->description }}</p>
 
+		<ol>
+		@foreach($todos as $todo)
+			<li>{{ $todo->title }}</li>
+		@endforeach
+		</ol>
+
 		<a href="/projects">&laquo; Back to all projects</a>
 	</div>
 @endsection

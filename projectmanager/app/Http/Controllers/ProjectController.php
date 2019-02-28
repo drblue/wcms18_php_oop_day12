@@ -18,9 +18,9 @@ class ProjectController extends Controller
 		return view('projects/index', ['projects' => $projects]);
 	}
 
-	public function show($id) {
-		$project = Project::findOrFail($id);
+	public function show(Project $project) {
+		$todos = $project->todos;
 
-		return view('projects/show', ['project' => $project]);
+		return view('projects/show', ['project' => $project, 'todos' => $todos]);
 	}
 }

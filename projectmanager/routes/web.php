@@ -16,4 +16,13 @@ Route::get('/', function () {
 });
 
 Route::get('/projects', 'ProjectController@index');
-Route::get('/projects/{id}', 'ProjectController@show');
+Route::get('/projects/{project}', 'ProjectController@show');
+
+// Route::get('/todos', 'TodoController@index');
+// Route::get('/todos/create', 'TodoController@create');
+// Route::post('/todos', 'TodoController@store');
+// Route::get('/todos/{todo}', 'TodoController@show');
+// Route::get('/todos/{todo}/edit', 'TodoController@edit');
+// Route::post('/todos/{todo}', 'TodoController@update');
+// Route::delete('/todos/{todo}', 'TodoController@destroy');
+Route::resource('/todos', 'TodoController');
